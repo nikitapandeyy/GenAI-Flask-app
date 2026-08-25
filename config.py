@@ -7,13 +7,12 @@ PARAMETERS = {
 }
 
 # watsonx credentials
-# Note: Normally we'd need an API key, but in Skill's Network Cloud IDE will automatically handle that for you.
 CREDENTIALS = {
     "url": "https://us-south.ml.cloud.ibm.com",
     "project_id": "skills-network"
 }
 
 # Model IDs
-LLAMA_MODEL_ID = "meta-llama/llama-3-2-11b-vision-instruct"
+LLAMA_MODEL_ID = "meta-llama/llama-3-3-70b-instruct"
 GRANITE_MODEL_ID = "ibm/granite-4-h-small"
 MISTRAL_MODEL_ID = "mistralai/mistral-small-3-1-24b-instruct-2503"
