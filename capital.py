@@ -12,12 +12,21 @@ params = {
 }
 
 model =ModelInference(
-    model_id='ibm/granite-4-h-small',
+    model_id='meta-llama/llama-4-maverick-17b-128e-instruct-fp8',#'ibm/granite-4-h-small',
     params=params,
     credentials=credentials,
     project_id='skills-network'
 )
 text="""
-only reply with answer. what is the capital of canada
+<|begin_of_text|><|start_header_id|>System <|end_of_header|>
+You are an expert assistant who provides concise and accurate answers.<|eot_id|>
+
+<|start_header_id|> user <|end_header_id|>
+What is the capital of Canada? <|eot_id|>
+
+<|start_header_id|>assistant<|end_header_id|>
+
+
 """
 print(model.generate(text)['results'][0]['generated_text'])
+
